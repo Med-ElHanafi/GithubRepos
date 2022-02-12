@@ -8,10 +8,10 @@
 import Foundation
 import SwiftUI
 
-struct ListRepositoryView: View {
-    @ObservedObject private var moduleState: ListRepositoriesModuleState
+struct RepositoriesListView: View {
+    @ObservedObject private var moduleState: RepositoriesListModuleState
     
-    init(moduleState: ListRepositoriesModuleState) {
+    init(moduleState: RepositoriesListModuleState) {
         self.moduleState = moduleState
     }
     
@@ -23,7 +23,7 @@ struct ListRepositoryView: View {
     }
 }
 
-private extension ListRepositoryView {
+private extension RepositoriesListView {
     @ViewBuilder func createBody() -> some View {
         VStack {
             headerText()

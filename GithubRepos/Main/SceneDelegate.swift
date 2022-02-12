@@ -21,8 +21,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // TODO refactor
         let viewModelFactory = RepositoryViewModelFactory()
         let repositoryService = RepositoryService(apiSession: APIService())
-        let moduleState = ListRepositoriesModuleState(repositoryService: repositoryService, viewModelFactory: viewModelFactory)
-        let view = ListRepositoryView(moduleState: moduleState)
+        let moduleState = RepositoriesListModuleState(repositoryService: repositoryService, viewModelFactory: viewModelFactory)
+        let view = RepositoriesListView(moduleState: moduleState)
         let vc = UIHostingController(rootView: view)
         let window = UIWindow(windowScene: windowScene)
         window.rootViewController = vc

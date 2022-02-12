@@ -8,7 +8,7 @@
 import Foundation
 import Combine
 
-final class ListRepositoriesModuleState: ObservableObject {
+final class RepositoriesListModuleState: ObservableObject {
     enum State: Equatable {
         case loading([RepositoryViewModel])
         case success([RepositoryViewModel])
