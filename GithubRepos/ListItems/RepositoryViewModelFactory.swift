@@ -22,7 +22,7 @@ final class RepositoryViewModelFactory: RepositoryViewModelManufacturing {
     }
     
     func makePlaceholders(upTo count: Int) -> [RepositoryViewModel] {
-        (0...count).map{
+        (0...count).map {
             RepositoryViewModel(
                 id: $0,
                 avatarURL: "",

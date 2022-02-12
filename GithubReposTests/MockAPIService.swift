@@ -18,7 +18,7 @@ public final class MockAPIService: APIServicing {
     public func request<T>(
         with builder: RequestBuilder,
         queue: DispatchQueue)
-    -> AnyPublisher<T, APIError> where T : Decodable {
+    -> AnyPublisher<T, APIError> where T: Decodable {
         requestBuilderSpy = builder
         requestCallCount += 1
         if let result = requestResultStub {

@@ -71,7 +71,7 @@ final class RepositoryServiceTests: XCTestCase {
                 case .finished:
                     break
                 }
-            } receiveValue: { model in
+            } receiveValue: { _ in
                 XCTFail("Unexpected result")
             }
             .store(in: &cancellables)
