@@ -8,22 +8,22 @@
 import Foundation
 
 // MARK: - Repository
-class Repository: Codable {
-    let id: Int
-    let name: String
-    let fullName: String
-    let description: String?
-    let createdAt: String
-    let updatedAt: String
-    let pushedAt: String
-    let topics: [String]
-    let forksCount: Int
-    let starCount: Int
-    let cloneURL: String
-    let openIssues: Int
-    let language: String
-    let watchers: Int
-    let owner: Owner
+public class Repository: Codable {
+    public let id: Int
+    public let name: String
+    public let fullName: String
+    public let description: String?
+    public let createdAt: String
+    public let updatedAt: String
+    public let pushedAt: String
+    public let topics: [String]
+    public let forksCount: Int
+    public let starCount: Int
+    public let cloneURL: String
+    public let openIssues: Int
+    public let language: String
+    public let watchers: Int
+    public let owner: Owner
     
     enum CodingKeys: String, CodingKey {
         case id
@@ -75,5 +75,11 @@ class Repository: Codable {
         self.language = language
         self.watchers = watchers
         self.owner = owner
+    }
+}
+
+extension Repository: Equatable {
+    public static func == (lhs: Repository, rhs: Repository) -> Bool {
+        lhs.id == rhs.id
     }
 }

@@ -8,10 +8,10 @@
 import Foundation
 
 // MARK: - RepositoryAPIModel
-class RepositoryAPIModel: Codable {
-    let totalCount: Int
-    let incompleteResults: Bool
-    let items: [Repository]
+public class RepositoryAPIModel: Codable {
+    public let totalCount: Int
+    public let incompleteResults: Bool
+    public let items: [Repository]
 
     enum CodingKeys: String, CodingKey {
         case totalCount = "total_count"

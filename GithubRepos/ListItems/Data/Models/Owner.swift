@@ -8,18 +8,18 @@
 import Foundation
 
 // MARK: - Owner
-class Owner: Codable {
-    let login: String
-    let id: Int
-    let nodeID: String
-    let avatarURL: String
-    let gravatarID: String
-    let url, htmlURL, followersURL: String
-    let followingURL, gistsURL, starredURL: String
-    let subscriptionsURL, organizationsURL, reposURL: String
-    let eventsURL: String
-    let receivedEventsURL: String
-    let siteAdmin: Bool
+public class Owner: Codable {
+    public let login: String
+    public let id: Int
+    public let nodeID: String
+    public let avatarURL: String
+    public let gravatarID: String
+    public let url, htmlURL, followersURL: String
+    public let followingURL, gistsURL, starredURL: String
+    public let subscriptionsURL, organizationsURL, reposURL: String
+    public let eventsURL: String
+    public let receivedEventsURL: String
+    public let siteAdmin: Bool
 
     enum CodingKeys: String, CodingKey {
         case login, id
