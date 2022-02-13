@@ -34,10 +34,11 @@ final class RepositoriesListModuleState: ObservableObject {
     func getRepositories() {
         repositoryService.getRepositoryList()
             .map { $0.items }
-            .sink { completion in
+            .sink { [weak self] completion in
                 switch completion {
                 case .failure(let error):
                     print("Handle error: \(error)")
+                    self?.state = .empty
                 case .finished:
                     break
                 }

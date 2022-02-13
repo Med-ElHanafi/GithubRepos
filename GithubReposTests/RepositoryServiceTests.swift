@@ -39,7 +39,7 @@ final class RepositoryServiceTests: XCTestCase {
         subject.getRepositoryList()
             .sink { completion in
                 switch completion {
-                case .failure(_):
+                case .failure:
                     XCTFail("Unexpected result")
                 case .finished:
                     break

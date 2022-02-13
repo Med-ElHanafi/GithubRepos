@@ -27,6 +27,11 @@
 		9C95DA9527B76C160027ABA2 /* Respository+TestData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C95DA8F27B764230027ABA2 /* Respository+TestData.swift */; };
 		9C95DA9627B76C1A0027ABA2 /* Owner+TestData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C95DA9127B764860027ABA2 /* Owner+TestData.swift */; };
 		9CF8779E27B870420071D490 /* RepositoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CF8779D27B870410071D490 /* RepositoryView.swift */; };
+		9CF877A027B8801F0071D490 /* RepositoriesListModuleStateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CF8779F27B8801F0071D490 /* RepositoriesListModuleStateTests.swift */; };
+		9CF877A327B8813D0071D490 /* MockRepositoryService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CF877A227B8813D0071D490 /* MockRepositoryService.swift */; };
+		9CF877A527B885330071D490 /* MockRepositoryViewModelFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CF877A427B885330071D490 /* MockRepositoryViewModelFactory.swift */; };
+		9CF877A727B88BD30071D490 /* RepositoryViewModel+TestData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CF877A627B88BD30071D490 /* RepositoryViewModel+TestData.swift */; };
+		9CF877AD27B8A2180071D490 /* ViewInspector in Frameworks */ = {isa = PBXBuildFile; productRef = 9CF877AC27B8A2180071D490 /* ViewInspector */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -76,6 +81,10 @@
 		9C95DA8F27B764230027ABA2 /* Respository+TestData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Respository+TestData.swift"; sourceTree = "<group>"; };
 		9C95DA9127B764860027ABA2 /* Owner+TestData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Owner+TestData.swift"; sourceTree = "<group>"; };
 		9CF8779D27B870410071D490 /* RepositoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryView.swift; sourceTree = "<group>"; };
+		9CF8779F27B8801F0071D490 /* RepositoriesListModuleStateTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoriesListModuleStateTests.swift; sourceTree = "<group>"; };
+		9CF877A227B8813D0071D490 /* MockRepositoryService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockRepositoryService.swift; sourceTree = "<group>"; };
+		9CF877A427B885330071D490 /* MockRepositoryViewModelFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockRepositoryViewModelFactory.swift; sourceTree = "<group>"; };
+		9CF877A627B88BD30071D490 /* RepositoryViewModel+TestData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RepositoryViewModel+TestData.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +99,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9CF877AD27B8A2180071D490 /* ViewInspector in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -129,9 +139,10 @@
 		9C95DA4227B6BFCC0027ABA2 /* GithubReposTests */ = {
 			isa = PBXGroup;
 			children = (
+				9CF877A127B880ED0071D490 /* Mocks */,
 				9C95DA9327B769A20027ABA2 /* TestData */,
-				9C95DA7727B74FDE0027ABA2 /* MockAPIService.swift */,
 				9C95DA7927B75C1A0027ABA2 /* RepositoryServiceTests.swift */,
+				9CF8779F27B8801F0071D490 /* RepositoriesListModuleStateTests.swift */,
 			);
 			path = GithubReposTests;
 			sourceTree = "<group>";
@@ -193,8 +204,19 @@
 				9C95DA7B27B7617D0027ABA2 /* RepositoryAPIModel+TestData.swift */,
 				9C95DA8F27B764230027ABA2 /* Respository+TestData.swift */,
 				9C95DA9127B764860027ABA2 /* Owner+TestData.swift */,
+				9CF877A627B88BD30071D490 /* RepositoryViewModel+TestData.swift */,
 			);
 			path = TestData;
+			sourceTree = "<group>";
+		};
+		9CF877A127B880ED0071D490 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				9C95DA7727B74FDE0027ABA2 /* MockAPIService.swift */,
+				9CF877A227B8813D0071D490 /* MockRepositoryService.swift */,
+				9CF877A427B885330071D490 /* MockRepositoryViewModelFactory.swift */,
+			);
+			path = Mocks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -215,6 +237,8 @@
 			dependencies = (
 			);
 			name = GithubRepos;
+			packageProductDependencies = (
+			);
 			productName = GithubRepos;
 			productReference = 9C95DA2927B6BFCB0027ABA2 /* GithubRepos.app */;
 			productType = "com.apple.product-type.application";
@@ -233,6 +257,9 @@
 				9C95DA4127B6BFCC0027ABA2 /* PBXTargetDependency */,
 			);
 			name = GithubReposTests;
+			packageProductDependencies = (
+				9CF877AC27B8A2180071D490 /* ViewInspector */,
+			);
 			productName = GithubReposTests;
 			productReference = 9C95DA3F27B6BFCC0027ABA2 /* GithubReposTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
@@ -265,6 +292,9 @@
 				Base,
 			);
 			mainGroup = 9C95DA2027B6BFCB0027ABA2;
+			packageReferences = (
+				9CF877AB27B8A2180071D490 /* XCRemoteSwiftPackageReference "ViewInspector" */,
+			);
 			productRefGroup = 9C95DA2A27B6BFCB0027ABA2 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -310,7 +340,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "if which swiftlint >/dev/null; then\necho \"swiftlint started\"\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+			shellScript = "export PATH=\"$PATH:/opt/homebrew/bin\"\n\nif which swiftlint >/dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -340,9 +370,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				9C95DA7827B74FDE0027ABA2 /* MockAPIService.swift in Sources */,
+				9CF877A727B88BD30071D490 /* RepositoryViewModel+TestData.swift in Sources */,
+				9CF877A027B8801F0071D490 /* RepositoriesListModuleStateTests.swift in Sources */,
 				9C95DA9527B76C160027ABA2 /* Respository+TestData.swift in Sources */,
 				9C95DA9427B76C0F0027ABA2 /* RepositoryAPIModel+TestData.swift in Sources */,
 				9C95DA7A27B75C1A0027ABA2 /* RepositoryServiceTests.swift in Sources */,
+				9CF877A527B885330071D490 /* MockRepositoryViewModelFactory.swift in Sources */,
+				9CF877A327B8813D0071D490 /* MockRepositoryService.swift in Sources */,
 				9C95DA9627B76C1A0027ABA2 /* Owner+TestData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -608,6 +642,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		9CF877AB27B8A2180071D490 /* XCRemoteSwiftPackageReference "ViewInspector" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/nalexn/ViewInspector";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		9CF877AC27B8A2180071D490 /* ViewInspector */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9CF877AB27B8A2180071D490 /* XCRemoteSwiftPackageReference "ViewInspector" */;
+			productName = ViewInspector;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 9C95DA2127B6BFCB0027ABA2 /* Project object */;
 }
