@@ -26,8 +26,8 @@ final class RepositoryViewModelFactory: RepositoryViewModelManufacturing {
             RepositoryViewModel(
                 id: $0,
                 avatarURL: "",
-                ownerName: "",
-                repositoryName: ""
+                ownerName: "ownerName",
+                repositoryName: "repositoryName"
             )
         }
     }

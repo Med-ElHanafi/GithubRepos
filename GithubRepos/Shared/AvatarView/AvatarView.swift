@@ -8,10 +8,18 @@
 import Kingfisher
 import SwiftUI
 
-struct UserAvatarView: View {
+struct AvatarView: View {
 
     private let imageUrl: String
     private let imageStyleSize: ImageStyleSize
+    
+    init(
+        imageUrl: String,
+        imageStyleSize: ImageStyleSize = .medium
+    ) {
+        self.imageUrl = imageUrl
+        self.imageStyleSize = imageStyleSize
+    }
 
     var body: some View {
         createAvatar()

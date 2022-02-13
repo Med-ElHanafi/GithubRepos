@@ -8,7 +8,7 @@
 import Foundation
 
 // MARK: - RepositoryAPIModel
-public class RepositoryAPIModel: Codable {
+class RepositoryAPIModel: Codable {
     public let totalCount: Int
     public let incompleteResults: Bool
     public let items: [Repository]

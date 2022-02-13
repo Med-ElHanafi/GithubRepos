@@ -11,10 +11,25 @@ struct RepositoryView: View {
     let viewModel: RepositoryViewModel
     
     var body: some View {
-        VStack {
-            Text(viewModel.repositoryName)
-            Text(viewModel.ownerName)
-            Text(viewModel.avatarURL)
+        ZStack {
+            RoundedRectangle(cornerRadius: 25, style: .continuous)
+                            .fill(Color.highlight)
+            HStack {
+                AvatarView(imageUrl: viewModel.avatarURL, imageStyleSize: .small)
+                    .padding(8)
+                VStack(alignment: .leading, spacing: 8) {
+                    Text(viewModel.repositoryName)
+                        .font(.body)
+                        .foregroundColor(.primary)
+                    Text(viewModel.ownerName)
+                        .font(.callout)
+                        .foregroundColor(.secondary)
+                }
+                Spacer()
+            }
         }
+        .padding(.vertical, 4)
+        .padding(.horizontal, 8)
+        .shadow(radius: 2)
     }
 }

@@ -8,7 +8,7 @@
 import Foundation
 
 // MARK: - Owner
-public class Owner: Codable {
+class Owner: Codable {
     public let login: String
     public let id: Int
     public let nodeID: String

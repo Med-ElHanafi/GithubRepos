@@ -45,6 +45,7 @@ private extension RepositoriesListView {
                 ForEach(viewModels) { viewModel in
                     LazyVStack {
                         RepositoryView(viewModel: viewModel)
+                            .redacted(reason: moduleState.state == .loading(viewModels) ? .placeholder : [])
                     }
                 }
             }
