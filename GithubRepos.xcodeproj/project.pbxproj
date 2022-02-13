@@ -32,6 +32,12 @@
 		9CF877A527B885330071D490 /* MockRepositoryViewModelFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CF877A427B885330071D490 /* MockRepositoryViewModelFactory.swift */; };
 		9CF877A727B88BD30071D490 /* RepositoryViewModel+TestData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CF877A627B88BD30071D490 /* RepositoryViewModel+TestData.swift */; };
 		9CF877AD27B8A2180071D490 /* ViewInspector in Frameworks */ = {isa = PBXBuildFile; productRef = 9CF877AC27B8A2180071D490 /* ViewInspector */; };
+		9CF877B327B8AFDA0071D490 /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CF877B227B8AFDA0071D490 /* ColorExtension.swift */; };
+		9CF877B627B8B7740071D490 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 9CF877B527B8B7740071D490 /* Kingfisher */; };
+		9CF877B827B8B82A0071D490 /* AvatarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CF877B727B8B82A0071D490 /* AvatarView.swift */; };
+		9CF877BA27B8BC310071D490 /* ImageStyleSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CF877B927B8BC310071D490 /* ImageStyleSize.swift */; };
+		9CF877BC27B8BE3C0071D490 /* ImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CF877BB27B8BE3C0071D490 /* ImageExtension.swift */; };
+		9CF877BE27B8BF970071D490 /* KFImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CF877BD27B8BF970071D490 /* KFImageExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -85,6 +91,11 @@
 		9CF877A227B8813D0071D490 /* MockRepositoryService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockRepositoryService.swift; sourceTree = "<group>"; };
 		9CF877A427B885330071D490 /* MockRepositoryViewModelFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockRepositoryViewModelFactory.swift; sourceTree = "<group>"; };
 		9CF877A627B88BD30071D490 /* RepositoryViewModel+TestData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RepositoryViewModel+TestData.swift"; sourceTree = "<group>"; };
+		9CF877B227B8AFDA0071D490 /* ColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
+		9CF877B727B8B82A0071D490 /* AvatarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarView.swift; sourceTree = "<group>"; };
+		9CF877B927B8BC310071D490 /* ImageStyleSize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageStyleSize.swift; sourceTree = "<group>"; };
+		9CF877BB27B8BE3C0071D490 /* ImageExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageExtension.swift; sourceTree = "<group>"; };
+		9CF877BD27B8BF970071D490 /* KFImageExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KFImageExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +103,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9CF877B627B8B7740071D490 /* Kingfisher in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -127,7 +139,8 @@
 		9C95DA2B27B6BFCB0027ABA2 /* GithubRepos */ = {
 			isa = PBXGroup;
 			children = (
-				9C95DA5D27B6C1430027ABA2 /* ListItems */,
+				9CF877B127B8AFB40071D490 /* Shared */,
+				9C95DA5D27B6C1430027ABA2 /* RepositoryList */,
 				9C95DA5C27B6C1290027ABA2 /* Main */,
 				9C95DA3527B6BFCC0027ABA2 /* Assets.xcassets */,
 				9C95DA3727B6BFCC0027ABA2 /* LaunchScreen.storyboard */,
@@ -156,17 +169,15 @@
 			path = Main;
 			sourceTree = "<group>";
 		};
-		9C95DA5D27B6C1430027ABA2 /* ListItems */ = {
+		9C95DA5D27B6C1430027ABA2 /* RepositoryList */ = {
 			isa = PBXGroup;
 			children = (
+				9CF877B027B8A9CF0071D490 /* Factory */,
+				9CF877AF27B8A9C20071D490 /* ViewModel */,
+				9CF877AE27B8A9B40071D490 /* View */,
 				9C95DA6427B71F9B0027ABA2 /* Data */,
-				9C95DA5E27B6C1600027ABA2 /* RepositoriesListView.swift */,
-				9C95DA7127B72E8B0027ABA2 /* RepositoriesListModuleState.swift */,
-				9C95DA7327B733BF0027ABA2 /* RepositoryViewModelFactory.swift */,
-				9C95DA7527B7357E0027ABA2 /* RepositoryViewModel.swift */,
-				9CF8779D27B870410071D490 /* RepositoryView.swift */,
 			);
-			path = ListItems;
+			path = RepositoryList;
 			sourceTree = "<group>";
 		};
 		9C95DA6427B71F9B0027ABA2 /* Data */ = {
@@ -219,6 +230,60 @@
 			path = Mocks;
 			sourceTree = "<group>";
 		};
+		9CF877AE27B8A9B40071D490 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				9C95DA5E27B6C1600027ABA2 /* RepositoriesListView.swift */,
+				9CF8779D27B870410071D490 /* RepositoryView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		9CF877AF27B8A9C20071D490 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				9C95DA7127B72E8B0027ABA2 /* RepositoriesListModuleState.swift */,
+				9C95DA7527B7357E0027ABA2 /* RepositoryViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		9CF877B027B8A9CF0071D490 /* Factory */ = {
+			isa = PBXGroup;
+			children = (
+				9C95DA7327B733BF0027ABA2 /* RepositoryViewModelFactory.swift */,
+			);
+			path = Factory;
+			sourceTree = "<group>";
+		};
+		9CF877B127B8AFB40071D490 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				9CF877C027B8C48E0071D490 /* AvatarView */,
+				9CF877BF27B8C47A0071D490 /* Extensions */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		9CF877BF27B8C47A0071D490 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				9CF877B227B8AFDA0071D490 /* ColorExtension.swift */,
+				9CF877BB27B8BE3C0071D490 /* ImageExtension.swift */,
+				9CF877BD27B8BF970071D490 /* KFImageExtension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		9CF877C027B8C48E0071D490 /* AvatarView */ = {
+			isa = PBXGroup;
+			children = (
+				9CF877B727B8B82A0071D490 /* AvatarView.swift */,
+				9CF877B927B8BC310071D490 /* ImageStyleSize.swift */,
+			);
+			path = AvatarView;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -238,6 +303,7 @@
 			);
 			name = GithubRepos;
 			packageProductDependencies = (
+				9CF877B527B8B7740071D490 /* Kingfisher */,
 			);
 			productName = GithubRepos;
 			productReference = 9C95DA2927B6BFCB0027ABA2 /* GithubRepos.app */;
@@ -294,6 +360,7 @@
 			mainGroup = 9C95DA2027B6BFCB0027ABA2;
 			packageReferences = (
 				9CF877AB27B8A2180071D490 /* XCRemoteSwiftPackageReference "ViewInspector" */,
+				9CF877B427B8B7740071D490 /* XCRemoteSwiftPackageReference "Kingfisher" */,
 			);
 			productRefGroup = 9C95DA2A27B6BFCB0027ABA2 /* Products */;
 			projectDirPath = "";
@@ -354,13 +421,18 @@
 				9C95DA7027B72CDD0027ABA2 /* RepositoryService.swift in Sources */,
 				9C95DA5F27B6C1600027ABA2 /* RepositoriesListView.swift in Sources */,
 				9C95DA6927B71FFF0027ABA2 /* Owner.swift in Sources */,
+				9CF877B327B8AFDA0071D490 /* ColorExtension.swift in Sources */,
 				9C95DA2D27B6BFCB0027ABA2 /* AppDelegate.swift in Sources */,
 				9C95DA2F27B6BFCB0027ABA2 /* SceneDelegate.swift in Sources */,
 				9C95DA7427B733BF0027ABA2 /* RepositoryViewModelFactory.swift in Sources */,
+				9CF877BC27B8BE3C0071D490 /* ImageExtension.swift in Sources */,
+				9CF877BE27B8BF970071D490 /* KFImageExtension.swift in Sources */,
 				9C95DA7227B72E8B0027ABA2 /* RepositoriesListModuleState.swift in Sources */,
 				9C95DA6327B71D380027ABA2 /* RepositoryAPIModel.swift in Sources */,
 				9C95DA6E27B72B3D0027ABA2 /* RepositoryEndpoint.swift in Sources */,
 				9C95DA6C27B725370027ABA2 /* APIService.swift in Sources */,
+				9CF877B827B8B82A0071D490 /* AvatarView.swift in Sources */,
+				9CF877BA27B8BC310071D490 /* ImageStyleSize.swift in Sources */,
 				9C95DA6727B71FB40027ABA2 /* Repository.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -652,6 +724,14 @@
 				kind = branch;
 			};
 		};
+		9CF877B427B8B7740071D490 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -659,6 +739,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 9CF877AB27B8A2180071D490 /* XCRemoteSwiftPackageReference "ViewInspector" */;
 			productName = ViewInspector;
+		};
+		9CF877B527B8B7740071D490 /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9CF877B427B8B7740071D490 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
