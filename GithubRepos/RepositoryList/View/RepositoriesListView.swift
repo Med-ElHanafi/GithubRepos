@@ -10,6 +10,7 @@ import SwiftUI
 
 struct RepositoriesListView: View {
     @ObservedObject private var moduleState: RepositoriesListModuleState
+    @State private var showingSheet = false
     
     init(moduleState: RepositoriesListModuleState) {
         self.moduleState = moduleState
@@ -32,7 +33,8 @@ private extension RepositoriesListView {
     }
     
     @ViewBuilder func headerText() -> some View {
-        Text("You can find swift repositories")
+        Text("Swift repositories")
+            .bold()
     }
     
     @ViewBuilder func createList() -> some View {
@@ -46,8 +48,15 @@ private extension RepositoriesListView {
                     LazyVStack {
                         RepositoryView(viewModel: viewModel)
                             .redacted(reason: moduleState.state == .loading(viewModels) ? .placeholder : [])
+                            .onTapGesture {
+                                moduleState.presentableViewModel = viewModel
+                                showingSheet.toggle()
+                            }
                     }
                 }
+            }
+            .sheet(isPresented: $showingSheet) {
+                RepositoryDetailView(viewModel: moduleState.presentableViewModel)
             }
         }
     }

@@ -20,6 +20,7 @@ class Owner: Codable {
     public let eventsURL: String
     public let receivedEventsURL: String
     public let siteAdmin: Bool
+    public let type: String
 
     enum CodingKeys: String, CodingKey {
         case login, id
@@ -38,9 +39,10 @@ class Owner: Codable {
         case eventsURL = "events_url"
         case receivedEventsURL = "received_events_url"
         case siteAdmin = "site_admin"
+        case type
     }
 
-    init(login: String, id: Int, nodeID: String, avatarURL: String, gravatarID: String, url: String, htmlURL: String, followersURL: String, followingURL: String, gistsURL: String, starredURL: String, subscriptionsURL: String, organizationsURL: String, reposURL: String, eventsURL: String, receivedEventsURL: String, siteAdmin: Bool) {
+    init(login: String, id: Int, nodeID: String, avatarURL: String, gravatarID: String, url: String, htmlURL: String, followersURL: String, followingURL: String, gistsURL: String, starredURL: String, subscriptionsURL: String, organizationsURL: String, reposURL: String, eventsURL: String, receivedEventsURL: String, siteAdmin: Bool, type: String) {
         self.login = login
         self.id = id
         self.nodeID = nodeID
@@ -58,5 +60,6 @@ class Owner: Codable {
         self.eventsURL = eventsURL
         self.receivedEventsURL = receivedEventsURL
         self.siteAdmin = siteAdmin
+        self.type = type
     }
 }

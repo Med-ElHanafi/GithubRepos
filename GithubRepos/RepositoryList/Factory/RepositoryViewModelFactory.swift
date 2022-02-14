@@ -17,7 +17,13 @@ final class RepositoryViewModelFactory: RepositoryViewModelManufacturing {
             id: repository.id,
             avatarURL: repository.owner.avatarURL,
             ownerName: repository.owner.login,
-            repositoryName: repository.fullName
+            repositoryName: repository.fullName,
+            createdAt: repository.createdAt,
+            description: repository.description ?? "",
+            forks: repository.forksCount,
+            stars: repository.starCount,
+            ownerType: repository.owner.type,
+            ownerURL: repository.owner.url
         )
     }
     
@@ -27,7 +33,13 @@ final class RepositoryViewModelFactory: RepositoryViewModelManufacturing {
                 id: $0,
                 avatarURL: "",
                 ownerName: "ownerName",
-                repositoryName: "repositoryName"
+                repositoryName: "repositoryName",
+                createdAt: "createdAt",
+                description: "description",
+                forks: 0,
+                stars: 0,
+                ownerType: "ownerType",
+                ownerURL: "ownerURL"
             )
         }
     }

@@ -11,9 +11,7 @@ struct RepositoryView: View {
     let viewModel: RepositoryViewModel
     
     var body: some View {
-        ZStack {
-            RoundedRectangle(cornerRadius: 25, style: .continuous)
-                            .fill(Color.highlight)
+        CardContainerView {
             HStack {
                 AvatarView(imageUrl: viewModel.avatarURL, imageStyleSize: .small)
                     .padding(8)
@@ -28,8 +26,5 @@ struct RepositoryView: View {
                 Spacer()
             }
         }
-        .padding(.vertical, 4)
-        .padding(.horizontal, 8)
-        .shadow(radius: 2)
     }
 }

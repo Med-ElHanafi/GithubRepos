@@ -13,27 +13,3 @@ public enum ImageStyleSize: CGFloat {
     case mediumLarge = 128
     case large = 160
 }
-
-extension ImageStyleSize {
-    public var cornerRadius: CGFloat {
-        switch self {
-        case .small:
-            return 3
-        case .medium, .mediumLarge:
-            return 4
-        case .large:
-            return 6
-        }
-    }
-    
-    public var circularImageSize: CGFloat {
-        switch self {
-        case .small:
-            return 42
-        case .medium, .mediumLarge:
-            return 72
-        case .large:
-            return 112
-        }
-    }
-}

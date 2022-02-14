@@ -16,6 +16,7 @@ final class RepositoriesListModuleState: ObservableObject {
     }
     
     @Published private(set) var state: State = .empty
+    @Published var presentableViewModel: RepositoryViewModel
     
     let repositoryService: RepositoryServicing
     let viewModelFactory: RepositoryViewModelManufacturing
@@ -29,6 +30,7 @@ final class RepositoriesListModuleState: ObservableObject {
         self.viewModelFactory = viewModelFactory
         
         state = .loading(viewModelFactory.makePlaceholders(upTo: 10))
+        presentableViewModel = viewModelFactory.makePlaceholders(upTo: 0).first!
     }
     
     func getRepositories() {
