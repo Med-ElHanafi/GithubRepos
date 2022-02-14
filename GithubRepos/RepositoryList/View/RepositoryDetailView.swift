@@ -40,11 +40,7 @@ extension RepositoryDetailView {
                     LabelStackView(description: "Github:", body: viewModel.ownerURL)
                     LabelStackView(description: "Type:", body: viewModel.ownerType)
                 }
-//                Spacer()
-//                Image(systemName: viewModel.ownerType == "User" ? "person" : "building.columns")
-//                    .padding()
             }
-//            .padding()
         }
     }
     
@@ -68,7 +64,6 @@ extension RepositoryDetailView {
                     }
                 }
             }
-//            .padding()
     }
     
     @ViewBuilder func createAvatarView() -> some View {
