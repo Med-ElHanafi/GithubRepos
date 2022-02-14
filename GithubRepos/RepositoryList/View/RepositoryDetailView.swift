@@ -28,31 +28,27 @@ extension RepositoryDetailView {
     
     @ViewBuilder func titleText() -> some View {
         Text("Repository details")
-            .font(.title)
+            .bold()
             .padding()
     }
     
     @ViewBuilder func createOwnerDetails() -> some View {
         VStack {
-            AvatarView(imageUrl: viewModel.avatarURL, imageStyleSize: .mediumLarge)
-                .padding(8)
-            CardContainerView {
-                HStack {
-                    VStack(alignment: .leading, spacing: 8) {
-                        LabelStackView(description: "Owner:", body: viewModel.ownerName)
-                        LabelStackView(description: "Github", body: viewModel.ownerURL)
-                    }
-                    Spacer()
-                    Image(systemName: viewModel.ownerType == "User" ? "person" : "building.columns")
-                        .padding()
+            HStack {
+                VStack(alignment: .leading, spacing: 8) {
+                    LabelStackView(description: "Owner:", body: viewModel.ownerName)
+                    LabelStackView(description: "Github:", body: viewModel.ownerURL)
+                    LabelStackView(description: "Type:", body: viewModel.ownerType)
                 }
-                .padding()
+//                Spacer()
+//                Image(systemName: viewModel.ownerType == "User" ? "person" : "building.columns")
+//                    .padding()
             }
+//            .padding()
         }
     }
     
     @ViewBuilder func createRepoDetails() -> some View {
-        CardContainerView {
             VStack {
                 VStack(alignment: .leading) {
                     LabelStackView(description: "Repo name:", body: viewModel.repositoryName)
@@ -72,12 +68,21 @@ extension RepositoryDetailView {
                     }
                 }
             }
-            .padding()
+//            .padding()
+    }
+    
+    @ViewBuilder func createAvatarView() -> some View {
+        HStack {
+            Spacer()
+            AvatarView(imageUrl: viewModel.avatarURL, imageStyleSize: .mediumLarge)
+                .padding(8)
+            Spacer()
         }
     }
     
     @ViewBuilder func createList() -> some View {
-        ScrollView {
+        List {
+            createAvatarView()
             createOwnerDetails()
             createRepoDetails()
         }

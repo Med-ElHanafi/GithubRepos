@@ -25,6 +25,7 @@ struct LabelStackView: View {
                 .font(.body)
                 .foregroundColor(.secondary)
             Text(bodyText)
+                .fixedSize(horizontal: false, vertical: true)
                 .font(.body)
                 .foregroundColor(.primary)
         }

@@ -41,7 +41,6 @@
 		9CF877C527B9B7730071D490 /* RepositoryDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CF877C427B9B7730071D490 /* RepositoryDetailView.swift */; };
 		9CF877C727B9C0500071D490 /* RepositoryDetailViewModuleState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CF877C627B9C0500071D490 /* RepositoryDetailViewModuleState.swift */; };
 		9CF877C927B9C7F00071D490 /* DateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CF877C827B9C7F00071D490 /* DateFormatter.swift */; };
-		9CF877CD27B9D7F30071D490 /* CardContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CF877CC27B9D7F30071D490 /* CardContainerView.swift */; };
 		9CF877CF27B9DF670071D490 /* LabelStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CF877CE27B9DF670071D490 /* LabelStackView.swift */; };
 /* End PBXBuildFile section */
 
@@ -104,7 +103,6 @@
 		9CF877C427B9B7730071D490 /* RepositoryDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryDetailView.swift; sourceTree = "<group>"; };
 		9CF877C627B9C0500071D490 /* RepositoryDetailViewModuleState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryDetailViewModuleState.swift; sourceTree = "<group>"; };
 		9CF877C827B9C7F00071D490 /* DateFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormatter.swift; sourceTree = "<group>"; };
-		9CF877CC27B9D7F30071D490 /* CardContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardContainerView.swift; sourceTree = "<group>"; };
 		9CF877CE27B9DF670071D490 /* LabelStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelStackView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -293,7 +291,6 @@
 			children = (
 				9CF877B727B8B82A0071D490 /* AvatarView.swift */,
 				9CF877B927B8BC310071D490 /* ImageStyleSize.swift */,
-				9CF877CC27B9D7F30071D490 /* CardContainerView.swift */,
 				9CF877CE27B9DF670071D490 /* LabelStackView.swift */,
 			);
 			path = AvatarView;
@@ -441,7 +438,6 @@
 				9C95DA2D27B6BFCB0027ABA2 /* AppDelegate.swift in Sources */,
 				9C95DA2F27B6BFCB0027ABA2 /* SceneDelegate.swift in Sources */,
 				9C95DA7427B733BF0027ABA2 /* RepositoryViewModelFactory.swift in Sources */,
-				9CF877CD27B9D7F30071D490 /* CardContainerView.swift in Sources */,
 				9CF877BC27B8BE3C0071D490 /* ImageExtension.swift in Sources */,
 				9CF877CF27B9DF670071D490 /* LabelStackView.swift in Sources */,
 				9CF877C527B9B7730071D490 /* RepositoryDetailView.swift in Sources */,

@@ -11,20 +11,18 @@ struct RepositoryView: View {
     let viewModel: RepositoryViewModel
     
     var body: some View {
-        CardContainerView {
-            HStack {
-                AvatarView(imageUrl: viewModel.avatarURL, imageStyleSize: .small)
-                    .padding(8)
-                VStack(alignment: .leading, spacing: 8) {
-                    Text(viewModel.repositoryName)
-                        .font(.body)
-                        .foregroundColor(.primary)
-                    Text(viewModel.ownerName)
-                        .font(.callout)
-                        .foregroundColor(.secondary)
-                }
-                Spacer()
+        HStack {
+            AvatarView(imageUrl: viewModel.avatarURL, imageStyleSize: .small)
+                .padding(8)
+            VStack(alignment: .leading, spacing: 8) {
+                Text(viewModel.repositoryName)
+                    .font(.body)
+                    .foregroundColor(.primary)
+                Text(viewModel.ownerName)
+                    .font(.callout)
+                    .foregroundColor(.secondary)
             }
+            Spacer()
         }
     }
 }

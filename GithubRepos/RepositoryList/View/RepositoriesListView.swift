@@ -43,17 +43,13 @@ private extension RepositoriesListView {
             EmptyView()
         case let .loading(viewModels),
             let .success(viewModels):
-            ScrollView {
-                ForEach(viewModels) { viewModel in
-                    LazyVStack {
-                        RepositoryView(viewModel: viewModel)
-                            .redacted(reason: moduleState.state == .loading(viewModels) ? .placeholder : [])
-                            .onTapGesture {
-                                moduleState.presentableViewModel = viewModel
-                                showingSheet.toggle()
-                            }
+            List(viewModels) { viewModel in
+                RepositoryView(viewModel: viewModel)
+                    .redacted(reason: moduleState.state == .loading(viewModels) ? .placeholder : [])
+                    .onTapGesture {
+                        moduleState.presentableViewModel = viewModel
+                        showingSheet.toggle()
                     }
-                }
             }
             .sheet(isPresented: $showingSheet) {
                 RepositoryDetailView(viewModel: moduleState.presentableViewModel)
