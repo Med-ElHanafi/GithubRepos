@@ -31,4 +31,11 @@ final class MockRepositoryViewModelFactory: RepositoryViewModelManufacturing {
         
         return makePlaceholdersResultStub ?? RepositoryViewModelFactory().makePlaceholders(upTo: count)
     }
+    
+    var makePlaceholderCallCount = 0
+    var makePlaceholderResultStub: RepositoryViewModel?
+    func makePlaceholder() -> RepositoryViewModel {
+        makePlaceholderCallCount += 1
+        return makePlaceholderResultStub ?? RepositoryViewModelFactory().makePlaceholder()
+    }
 }

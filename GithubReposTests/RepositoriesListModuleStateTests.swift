@@ -41,6 +41,7 @@ final class RepositoriesListModuleStateTests: XCTestCase {
         
         XCTAssertEqual(1, mockViewModelFactory.makePlaceholdersUpToCallCount)
         XCTAssertEqual(10, mockViewModelFactory.makePlaceholdersUpToCountSpy)
+        XCTAssertEqual(1, mockViewModelFactory.makePlaceholderCallCount)
         
         subject.$state
             .sink { _ in

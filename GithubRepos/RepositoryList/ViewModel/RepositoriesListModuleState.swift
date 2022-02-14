@@ -30,7 +30,7 @@ final class RepositoriesListModuleState: ObservableObject {
         self.viewModelFactory = viewModelFactory
         
         state = .loading(viewModelFactory.makePlaceholders(upTo: 10))
-        presentableViewModel = viewModelFactory.makePlaceholders(upTo: 0).first!
+        presentableViewModel = viewModelFactory.makePlaceholder()
     }
     
     func getRepositories() {

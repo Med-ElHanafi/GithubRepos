@@ -10,6 +10,7 @@ import Foundation
 protocol RepositoryViewModelManufacturing {
     func make(from repository: Repository) -> RepositoryViewModel
     func makePlaceholders(upTo count: Int) -> [RepositoryViewModel]
+    func makePlaceholder() -> RepositoryViewModel
 }
 final class RepositoryViewModelFactory: RepositoryViewModelManufacturing {
     func make(from repository: Repository) -> RepositoryViewModel {
@@ -42,5 +43,20 @@ final class RepositoryViewModelFactory: RepositoryViewModelManufacturing {
                 ownerURL: "ownerURL"
             )
         }
+    }
+    
+    func makePlaceholder() -> RepositoryViewModel {
+        RepositoryViewModel(
+            id: 0,
+            avatarURL: "",
+            ownerName: "ownerName",
+            repositoryName: "repositoryName",
+            createdAt: "createdAt",
+            description: "description",
+            forks: 0,
+            stars: 0,
+            ownerType: "ownerType",
+            ownerURL: "ownerURL"
+        )
     }
 }
